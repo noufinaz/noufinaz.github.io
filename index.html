@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GLOBALLINKS — Online Quotation & Estimate Generator | Kerala</title>
+  <meta name="description" content="Official GLOBALLINKS quotation and estimate generator for CCTV surveillance, biometric access, FortiGate firewalls, Dell systems, and subsidized rooftop solar in Kerala." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#070D1F',
+              900: '#0B132B',
+              800: '#111C38',
+              700: '#1B2A4E',
+            },
+            slateSilver: '#CBD5E1',
+            skyAccent: '#38BDF8',
+            emeraldSolar: '#10B981',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: #070D1F;
+      color: #F8FAFC;
+      overflow-x: hidden;
+    }
+
+    .arch-grid-bg {
+      background-image:
+        radial-gradient(circle at 85% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 42%),
+        radial-gradient(circle at 10% 85%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Executive A4 Print Styling */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 10mm;
+      }
+
+      html, body {
+        background: #FFFFFF !important;
+        color: #0F172A !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      #appShell {
+        display: block !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      #previewColumn {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        position: static !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      #a4Sheet {
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+    }
+  </style>
+</head>
+<body class="arch-grid-bg min-h-screen antialiased selection:bg-sky-400/20 selection:text-white">
+
+  <!-- TOAST NOTIFICATION CONTAINER (Non-blocking feedback) -->
+  <div id="toastContainer" class="no-print fixed bottom-5 left-1/2 -translate-x-1/2 z-50 pointer-events-none flex flex-col items-center gap-2 w-full max-w-md px-4"></div>
+
+  <!-- TOP ARCHITECTURAL HEADER BAR -->
+  <header class="no-print sticky top-0 z-40 bg-navy-900/90 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <!-- Brand Identity -->
+      <div class="flex items-center gap-3.5 min-w-0">
+        <a href="https://noufinaz.github.io" class="w-11 h-11 rounded-2xl bg-gradient-to-br from-sky-400/20 to-navy-800 border border-sky-400/30 flex items-center justify-center shadow-lg shadow-sky-500/10 shrink-0 hover:border-sky-400 transition-colors" aria-label="GLOBALLINKS Home">
+          <!-- Custom Geometric Shield-Link SVG Logo -->
+          <svg class="w-6 h-6" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 3.5L40.5 9.5V22.8C40.5 33.2 33.3 40.8 24 44.5C14.7 40.8 7.5 33.2 7.5 22.8V9.5L24 3.5Z" stroke="#E2E8F0" stroke-width="2.4" stroke-linejoin="round"/>
+            <rect x="12.5" y="18.5" width="14.5" height="8.5" rx="4.25" stroke="#38BDF8" stroke-width="2.3"/>
+            <rect x="21" y="23.5" width="14.5" height="8.5" rx="4.25" stroke="#10B981" stroke-width="2.3"/>
+          </svg>
+        </a>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2.5">
+            <span class="text-lg sm:text-xl font-extrabold tracking-tight text-white truncate">GLOBALLINKS</span>
+            <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-md bg-sky-500/15 border border-sky-400/30 text-[10px] font-bold uppercase tracking-wider text-sky-300">Quote Studio</span>
+          </div>
+          <p class="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-slate-400 font-semibold truncate">
+            SECURITY · IT · SOLAR · KERALA
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact Strip & Back to Website -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <div class="hidden xl:flex items-center gap-4 text-xs text-slate-300 mr-2 border-r border-white/10 pr-5">
+          <span>+91 81370 70365</span>
+          <span class="text-white/20">·</span>
+          <span>noufinaz@outlook.com</span>
+          <span class="text-white/20">·</span>
+          <span class="text-slate-400">Kottayam · Thiruvalla · Kochi · All Kerala</span>
+        </div>
+
+        <a href="https://noufinaz.github.io" class="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-xs font-semibold text-slate-200 hover:text-white transition-colors">
+          <svg class="w-3.5 h-3.5 text-sky-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+          <span>Back to Website</span>
+        </a>
+
+        <button onclick="window.print()" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-sky-400 hover:bg-sky-300 text-navy-950 font-bold text-xs transition-colors shadow-lg shadow-sky-400/20">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <span>Print / PDF</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Quick Jump Bar -->
+    <div class="lg:hidden border-t border-white/10 bg-navy-950/90 px-4 py-2 flex items-center justify-between gap-2">
+      <div class="grid grid-cols-2 gap-2 flex-1">
+        <a href="#editorColumn" class="text-center py-2 rounded-lg bg-navy-800 border border-white/10 text-xs font-bold text-sky-300">
+          1. Edit Quotation
+        </a>
+        <a href="#previewColumn" class="text-center py-2 rounded-lg bg-navy-800 border border-white/10 text-xs font-bold text-emerald-300">
+          2. Live A4 Preview
+        </a>
+      </div>
+      <button onclick="window.print()" aria-label="Print PDF" class="px-3.5 py-2 rounded-lg bg-sky-400 text-navy-950 text-xs font-extrabold shrink-0">
+        PDF
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN TWO-PANEL WORKSPACE -->
+  <main id="appShell" class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+    <!-- LEFT COLUMN: QUOTATION EDITOR CONTROLS (5 Cols on Desktop) -->
+    <section id="editorColumn" class="no-print lg:col-span-5 space-y-6">
+
+      <!-- Action Toolbar: Save, Load, Reset -->
+      <div class="bg-navy-800/90 border border-white/10 rounded-2xl p-4 flex flex-wrap items-center justify-between gap-2.5 shadow-xl">
+        <div class="flex items-center gap-2">
+          <button onclick="saveDraft()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 text-xs font-semibold text-white transition-colors">
+            <svg class="w-3.5 h-3.5 text-sky-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            Save Draft
+          </button>
+          <button onclick="loadDraft()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-slate-300 transition-colors">
+            Load Draft
+          </button>
+        </div>
+        <button onclick="resetNewQuote()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-rose-500/15 hover:bg-rose-500/25 border border-rose-400/30 text-xs font-bold text-rose-300 transition-colors">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+          New Quote
+        </button>
+      </div>
+
+      <!-- CARD 1: QUOTATION METADATA -->
+      <div class="bg-navy-800/90 border border-white/10 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
+        <div class="flex items-center justify-between border-b border-white/10 pb-3">
+          <h2 class="text-sm font-extrabold uppercase tracking-wider text-sky-400">1. Quotation Metadata</h2>
+          <span class="text-[11px] text-slate-400">Auto-synced</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Quote Number</label>
+            <input id="quoteNumber" type="text" oninput="renderPreview()" class="w-full bg-navy-900 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm font-semibold text-white focus:outline-none focus:border-sky-400" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Quote Date</label>
+            <input id="quoteDate" type="date" oninput="renderPreview()" class="w-full bg-navy-900 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-sky-400" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Validity Period</label>
+            <select id="quoteValidity" onchange="renderPreview()" class="w-full bg-navy-900 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-sky-400">
+              <option value="7 Days">7 Days</option>
+              <option value="15 Days" selected>15 Days</option>
+              <option value="30 Days">30 Days</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Division / Category Tag</label>
+            <select id="quoteCategory" onchange="renderPreview()" class="w-full bg-navy-900 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-sky-400">
+              <option value="CCTV & Biometrics">CCTV &amp; Biometrics</option>
+              <option value="IT & Firewalls">IT &amp; Firewalls</option>
+              <option value="Rooftop Solar">Rooftop Solar</option>
+              <option value="Web & M365">Web &amp; M365</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Prepared By / Sales Executive</label>
+            <input id="salesExec" type="text" value="Mohammed Noufal E.A." oninput="renderPreview()" class="w-full bg-navy-900 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-sky-400" />
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: CUSTOMER & SITE DETAILS -->
+      <div class="bg-navy-800/90 border border-white/10 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
+        <div class="flex items-center justify-between border-b border-white/10 pb-3">
+          <h2 class="text-sm font-extrabold uppercase tracking-wider text-sky-400">2. Customer &amp; Kerala Site Details</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Client Name / Company *</label>
+            <input id="clientName" type="text" placeholder="e.g., St. Thomas Traders / Dr. Arun Nair" oninput="renderPreview()" class="w-full bg-navy-900 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-400" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Phone / WhatsApp *</label>
+            <input id="clientPhone" type="tel" placeholder="e.g., 9847012345" oninput="renderPreview()" class="w-full bg-navy-900 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-400" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">District in Kerala</label>
+            <select id="clientDistrict" onchange="renderPreview()" class="w-full bg-navy-900 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-sky-400">
+              <option value="Kottayam" selected>Kottayam</option>
+              <option value="Pathanamthitta">Pathanamthitta</option>
+              <option value="Alappuzha">Alappuzha</option>
+              <option value="Ernakulam">Ernakulam</option>
+              <option value="Thrissur">Thrissur</option>
+              <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+              <option value="Kollam">Kollam</option>
+              <option value="Idukki">Idukki</option>
+              <option value="Palakkad">Palakkad</option>
+              <option value="Malappuram">Malappuram</option>
+              <option value="Kozhikode">Kozhikode</option>
+              <option value="Wayanad">Wayanad</option>
+              <option value="Kannur">Kannur</option>
+              <option value="Kasaragod">Kasaragod</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Site Address / Location</label>
+            <input id="clientAddress" type="text" placeholder="Town, Landmark, Pincode" oninput="renderPreview()" class="w-full bg-navy-900 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-400" />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Client GSTIN (Optional)</label>
+            <input id="clientGstin" type="text" placeholder="e.g., 32AABCU9603R1ZM" oninput="this.value = this.value.toUpperCase(); renderPreview();" class="w-full bg-navy-900 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-400" />
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: QUICK-ADD PRESET CATALOG ITEMS -->
+      <div class="bg-navy-800/90 border border-white/10 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
+        <div class="flex items-center justify-between border-b border-white/10 pb-3">
+          <h2 class="text-sm font-extrabold uppercase tracking-wider text-sky-400">3. Quick-Add Globallinks Catalog</h2>
+          <span class="text-[11px] text-slate-400">1-Click Add</span>
+        </div>
+
+        <div id="presetCatalogList" class="grid grid-cols-1 gap-2 max-h-72 overflow-y-auto pr-1"></div>
+      </div>
+
+      <!-- CARD 4: CUSTOM LINE ITEM BUILDER & ACTIVE ITEMS -->
+      <div class="bg-navy-800/90 border border-white/10 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
+        <div class="flex items-center justify-between border-b border-white/10 pb-3">
+          <h2 class="text-sm font-extrabold uppercase tracking-wider text-sky-400">4. Line Items &amp; Custom Builder</h2>
+          <span id="itemCountTag" class="text-xs font-bold text-slate-300">0 Items</span>
+        </div>
+
+        <!-- Custom Item Form -->
+        <div class="bg-navy-900/90 border border-white/10 rounded-xl p-4 space-y-3">
+          <p class="text-[11px] uppercase tracking-wider text-slate-400 font-bold">Add Custom Equipment / Service</p>
+          <input id="customDesc" type="text" placeholder="Item Title & Technical Specifications" class="w-full bg-navy-950 border border-white/15 rounded-xl px-3.5 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-400" />
+          <div class="grid grid-cols-3 gap-2.5">
+            <div>
+              <label class="block text-[10px] uppercase text-slate-400 mb-1">Qty</label>
+              <input id="customQty" type="number" min="1" value="1" class="w-full bg-navy-950 border border-white/15 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-sky-400" />
+            </div>
+            <div>
+              <label class="block text-[10px] uppercase text-slate-400 mb-1">Unit</label>
+              <select id="customUnit" class="w-full bg-navy-950 border border-white/15 rounded-xl px-2.5 py-2 text-sm text-white focus:outline-none focus:border-sky-400">
+                <option value="Nos">Nos</option>
+                <option value="Kit">Kit</option>
+                <option value="Mtr">Mtr</option>
+                <option value="Lot">Lot</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[10px] uppercase text-slate-400 mb-1">Unit Price (₹)</label>
+              <input id="customPrice" type="number" min="0" step="100" placeholder="5000" class="w-full bg-navy-950 border border-white/15 rounded-xl px-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-400" />
+            </div>
+          </div>
+          <button onclick="addCustomItem()" class="w-full py-2.5 rounded-xl bg-sky-400 hover:bg-sky-300 text-navy-950 font-bold text-xs transition-colors">
+            + Add Custom Item to Quotation
+          </button>
+        </div>
+
+        <!-- Editable Active Line Items List -->
+        <div id="editorLineItems" class="space-y-2.5"></div>
+      </div>
+
+      <!-- CARD 5: PRICING, GST & SOLAR SUBSIDY CONTROLS -->
+      <div class="bg-navy-800/90 border border-white/10 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
+        <div class="flex items-center justify-between border-b border-white/10 pb-3">
+          <h2 class="text-sm font-extrabold uppercase tracking-wider text-sky-400">5. Discount, GST &amp; Solar Subsidy</h2>
+        </div>
+
+        <!-- Discount Row -->
+        <div class="grid grid-cols-12 gap-3 items-end">
+          <div class="col-span-5">
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Discount Type</label>
+            <select id="discountType" onchange="renderPreview()" class="w-full bg-navy-900 border border-white/15 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-sky-400">
+              <option value="flat">Flat (₹)</option>
+              <option value="percent">Percent (%)</option>
+            </select>
+          </div>
+          <div class="col-span-7">
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Discount Value</label>
+            <input id="discountValue" type="number" min="0" value="0" oninput="renderPreview()" class="w-full bg-navy-900 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-sky-400" />
+          </div>
+        </div>
+
+        <!-- GST Mode -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1.5">Tax / GST Treatment (Kerala CGST 9% + SGST 9%)</label>
+          <select id="gstMode" onchange="renderPreview()" class="w-full bg-navy-900 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-sky-400">
+            <option value="none">No GST (Estimate / Indicative Quote)</option>
+            <option value="extra">+18% GST Extra (CGST 9% + SGST 9%)</option>
+            <option value="included">18% GST Included in Prices</option>
+          </select>
+        </div>
+
+        <!-- PM Surya Ghar Solar Subsidy Toggle -->
+        <label class="flex items-start gap-3 p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-400/25 cursor-pointer">
+          <input id="solarSubsidyToggle" type="checkbox" onchange="renderPreview()" class="mt-0.5 w-4 h-4 accent-emerald-500 rounded" />
+          <div>
+            <span class="text-xs font-bold text-emerald-300 block">Apply PM Surya Ghar Solar Subsidy (-₹78,000)</span>
+            <span class="text-[11px] text-slate-300 block mt-0.5">Shows ₹78,000 direct bank subsidy deduction &amp; net effective solar cost on the quotation.</span>
+          </div>
+        </label>
+      </div>
+
+      <!-- CARD 6: EDITABLE TERMS & SCOPE NOTES -->
+      <div class="bg-navy-800/90 border border-white/10 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
+        <div class="flex items-center justify-between border-b border-white/10 pb-3">
+          <h2 class="text-sm font-extrabold uppercase tracking-wider text-sky-400">6. Scope &amp; Terms</h2>
+        </div>
+        <textarea id="termsNotes" rows="5" oninput="renderPreview()" class="w-full bg-navy-900 border border-white/15 rounded-xl p-3.5 text-xs leading-relaxed text-slate-200 focus:outline-none focus:border-sky-400">1. Free on-site engineering survey across Kerala included prior to final dispatch.
+2. Genuine OEM hardware supplied with 1-year / standard manufacturer warranty.
+3. Concealed PVC conduit cabling, rack termination & mobile remote-view app setup included as specified.
+4. Payment Terms: 60% advance along with confirmed purchase order; 40% upon commissioning & handover.
+5. For Rooftop Solar: PM Surya Ghar subsidy (₹78,000 for 3kW+) is credited directly to the customer's bank account post KSEB net-metering.</textarea>
+      </div>
+
+      <!-- PRIMARY EXPORT & SHARING BUTTONS -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pb-6">
+        <button onclick="window.print()" class="py-4 px-5 rounded-2xl bg-sky-400 hover:bg-sky-300 text-navy-950 font-extrabold text-sm transition-all shadow-lg shadow-sky-400/20 flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print / Save as PDF
+        </button>
+        <button onclick="sendQuoteViaWhatsApp()" class="py-4 px-5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-navy-950 font-extrabold text-sm transition-all shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Send Quote via WhatsApp
+        </button>
+      </div>
+    </section>
+
+    <!-- RIGHT COLUMN: LIVE EXECUTIVE A4 QUOTATION PREVIEW (7 Cols on Desktop) -->
+    <section id="previewColumn" class="lg:col-span-7 lg:sticky lg:top-24 space-y-4">
+      <!-- Preview Helper Bar (Hidden on Print) -->
+      <div class="no-print flex flex-wrap items-center justify-between gap-3 bg-navy-800/80 border border-white/10 rounded-2xl px-4 py-3">
+        <div class="flex items-center gap-2 text-xs text-slate-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Live Executive A4 Quotation Sheet</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="copyQuoteSummary()" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/15 text-xs font-semibold text-white transition-colors">
+            Copy Summary
+          </button>
+          <button onclick="sendQuoteViaWhatsApp()" class="px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-navy-950 text-xs font-bold transition-colors">
+            WhatsApp Quote
+          </button>
+        </div>
+      </div>
+
+      <!-- OFFICIAL PRINTABLE A4 DOCUMENT -->
+      <article id="a4Sheet" class="bg-white text-slate-900 rounded-2xl shadow-2xl border border-slate-200 overflow-hidden">
+        <!-- Executive Dark Navy Letterhead -->
+        <div class="bg-[#0B132B] text-white px-6 sm:px-10 py-7 sm:py-8 border-b-4 border-[#38BDF8]">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-6">
+            <!-- Brand & Address -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#111C38] border border-sky-400/40 flex items-center justify-center shrink-0">
+                <svg class="w-7 h-7" viewBox="0 0 48 48" fill="none">
+                  <path d="M24 3.5L40.5 9.5V22.8C40.5 33.2 33.3 40.8 24 44.5C14.7 40.8 7.5 33.2 7.5 22.8V9.5L24 3.5Z" stroke="#E2E8F0" stroke-width="2.5" stroke-linejoin="round"/>
+                  <rect x="12.5" y="18.5" width="14.5" height="8.5" rx="4.25" stroke="#38BDF8" stroke-width="2.4"/>
+                  <rect x="21" y="23.5" width="14.5" height="8.5" rx="4.25" stroke="#10B981" stroke-width="2.4"/>
+                </svg>
+              </div>
+              <div>
+                <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white leading-none">GLOBALLINKS</h1>
+                <p class="text-[11px] uppercase tracking-[0.22em] text-sky-400 font-bold mt-1.5">SECURITY · IT INFRASTRUCTURE · SOLAR</p>
+                <div class="mt-3 text-xs text-slate-300 space-y-0.5">
+                  <p>Kottayam · Thiruvalla · Kochi · Serving All 14 Districts of Kerala</p>
+                  <p>Phone / WhatsApp: <strong class="text-white">+91 81370 70365</strong> &nbsp;|&nbsp; Email: <strong class="text-white">noufinaz@outlook.com</strong></p>
+                  <p class="text-sky-300">Web Catalog: https://noufinaz.github.io</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Document Badge & Quote ID -->
+            <div class="sm:text-right shrink-0">
+              <span class="inline-block px-3 py-1 rounded-md bg-sky-400 text-[#0B132B] text-xs font-extrabold uppercase tracking-widest">
+                QUOTATION / ESTIMATE
+              </span>
+              <p id="prevQuoteNo" class="text-lg font-extrabold text-white mt-2">GL-QT-2026-104</p>
+              <p id="prevCategoryBadge" class="text-xs text-sky-300 font-semibold mt-0.5">CCTV &amp; Biometrics</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metadata & Client Block -->
+        <div class="px-6 sm:px-10 py-6 bg-slate-50 border-b border-slate-200 grid grid-cols-1 sm:grid-cols-12 gap-6">
+          <!-- Prepared For -->
+          <div class="sm:col-span-7 space-y-1">
+            <p class="text-[10px] font-extrabold uppercase tracking-widest text-slate-400">Quotation Prepared For</p>
+            <h3 id="prevClientName" class="text-lg font-extrabold text-slate-900">Valued Customer</h3>
+            <p id="prevClientAddress" class="text-xs text-slate-600">Kottayam, Kerala</p>
+            <p id="prevClientContact" class="text-xs text-slate-700 font-medium pt-0.5">Phone: —</p>
+            <p id="prevClientGstin" class="text-xs font-bold text-slate-800 hidden"></p>
+          </div>
+
+          <!-- Quote Meta Table -->
+          <div class="sm:col-span-5 bg-white rounded-xl border border-slate-200 p-3.5 text-xs space-y-2">
+            <div class="flex justify-between">
+              <span class="text-slate-500">Issue Date:</span>
+              <span id="prevDate" class="font-bold text-slate-900">—</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-500">Valid For:</span>
+              <span id="prevValidity" class="font-bold text-slate-900">15 Days</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-500">Prepared By:</span>
+              <span id="prevSalesExec" class="font-bold text-slate-900">Mohammed Noufal E.A.</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-500">Currency:</span>
+              <span class="font-bold text-slate-900">INR (₹)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Itemized Schedule Table -->
+        <div class="px-6 sm:px-10 py-6">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-[#0B132B] text-white text-[11px] uppercase tracking-wider">
+                  <th class="py-3 px-3 rounded-tl-lg w-10 text-center">#</th>
+                  <th class="py-3 px-3">Equipment / Turnkey Package Description</th>
+                  <th class="py-3 px-3 text-center w-20">Qty</th>
+                  <th class="py-3 px-3 text-right w-28">Unit Rate</th>
+                  <th class="py-3 px-3 rounded-tr-lg text-right w-32">Amount (₹)</th>
+                </tr>
+              </thead>
+              <tbody id="prevTableBody" class="divide-y divide-slate-200 text-xs sm:text-sm"></tbody>
+            </table>
+          </div>
+
+          <!-- Totals & Tax / Subsidy Breakdown -->
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-12 gap-6 items-start">
+            <!-- Left Note -->
+            <div class="sm:col-span-6 space-y-2">
+              <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600">
+                <p class="font-bold text-slate-800 mb-1">Authorized Systems Integration</p>
+                <p>Includes genuine serial-numbered components, neat routing, and remote smartphone/desktop commissioning.</p>
+              </div>
+              <div id="prevSubsidyNoteBox" class="hidden p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-900">
+                <p class="font-extrabold text-emerald-800">PM Surya Ghar Rooftop Solar Subsidy</p>
+                <p class="mt-0.5">₹78,000 central government subsidy is credited directly to the beneficiary's bank account upon KSEB net-metering approval.</p>
+              </div>
+            </div>
+
+            <!-- Right Financial Summary -->
+            <div class="sm:col-span-6 bg-slate-50 rounded-xl border border-slate-200 p-4 space-y-2.5 text-xs sm:text-sm">
+              <div class="flex justify-between text-slate-600">
+                <span>Subtotal</span>
+                <span id="prevSubtotal" class="font-bold text-slate-900">₹0</span>
+              </div>
+
+              <div id="prevDiscountRow" class="hidden flex justify-between text-sky-700">
+                <span id="prevDiscountLabel">Discount</span>
+                <span id="prevDiscountAmt" class="font-bold">− ₹0</span>
+              </div>
+
+              <div id="prevTaxableRow" class="hidden flex justify-between text-slate-600 pt-1 border-t border-slate-200">
+                <span>Taxable Value</span>
+                <span id="prevTaxableAmt" class="font-semibold text-slate-900">₹0</span>
+              </div>
+
+              <div id="prevCgstRow" class="hidden flex justify-between text-slate-600">
+                <span>CGST (9%)</span>
+                <span id="prevCgstAmt" class="font-semibold text-slate-900">₹0</span>
+              </div>
+
+              <div id="prevSgstRow" class="hidden flex justify-between text-slate-600">
+                <span>SGST (9%)</span>
+                <span id="prevSgstAmt" class="font-semibold text-slate-900">₹0</span>
+              </div>
+
+              <div id="prevGstIncludedNote" class="hidden text-[11px] text-slate-500 italic">
+                * Inclusive of 18% GST (CGST 9% + SGST 9%)
+              </div>
+
+              <div class="pt-2.5 border-t-2 border-slate-300 flex items-baseline justify-between">
+                <span class="font-extrabold text-slate-900 uppercase text-xs tracking-wider">Total Quoted Amount</span>
+                <span id="prevGrandTotal" class="text-xl font-extrabold text-[#0B132B]">₹0</span>
+              </div>
+
+              <div id="prevSubsidyRow" class="hidden pt-2 border-t border-emerald-200 flex justify-between text-emerald-700 font-bold">
+                <span>Less: PM Surya Ghar Bank Subsidy</span>
+                <span>− ₹78,000</span>
+              </div>
+
+              <div id="prevNetSolarRow" class="hidden p-2.5 rounded-lg bg-emerald-600 text-white flex items-baseline justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider">Effective Net Cost</span>
+                <span id="prevNetSolarAmt" class="text-lg font-extrabold">₹0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Terms & Conditions -->
+          <div class="mt-8 pt-5 border-t border-slate-200">
+            <h4 class="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 mb-2">Terms, Warranty &amp; Execution Scope</h4>
+            <div id="prevTerms" class="text-xs text-slate-600 whitespace-pre-line leading-relaxed"></div>
+          </div>
+
+          <!-- Executive Sign-Off Footer -->
+          <div class="mt-10 pt-6 border-t border-slate-200 flex flex-col sm:flex-row sm:items-end justify-between gap-6 text-xs">
+            <div class="text-slate-500">
+              <p class="font-bold text-slate-800">Customer Acceptance</p>
+              <p class="mt-6 border-t border-slate-300 w-48 pt-1">Authorized Signatory &amp; Date</p>
+            </div>
+            <div class="sm:text-right">
+              <p class="font-extrabold text-[#0B132B]">For GLOBALLINKS</p>
+              <p id="prevSignExec" class="text-slate-600 mt-0.5">Mohammed Noufal E.A.</p>
+              <p class="mt-5 border-t border-slate-300 sm:ml-auto w-52 pt-1 text-slate-500">Authorized Engineer / Sales Desk</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- JAVASCRIPT APPLICATION LOGIC -->
+  <script>
+    const WA_DESK_NUMBER = '918137070365';
+    const STORAGE_KEY = 'globallinks_quotation_draft_v1';
+
+    // Preset Catalog matching GLOBALLINKS Storefront
+    const PRESET_CATALOG = [
+      {
+        id: 'p_cctv4',
+        title: '4-Camera Hikvision/CP Plus IP PoE CCTV Package',
+        specs: '4x Weatherproof IP Cameras, 4-Ch PoE NVR, 1TB Surveillance HDD & Mobile App Setup',
+        unit: 'Kit',
+        price: 20000,
+        category: 'CCTV & Biometrics'
+      },
+      {
+        id: 'p_cctv8',
+        title: '8-Camera Commercial 5MP CCTV Kit',
+        specs: '8x 5MP Night-Vision IP Cameras, 8-Ch PoE NVR, 2TB Surveillance HDD & Remote View',
+        unit: 'Kit',
+        price: 40000,
+        category: 'CCTV & Biometrics'
+      },
+      {
+        id: 'p_bio',
+        title: 'Biometric Fingerprint & Face Access Terminal',
+        specs: 'eSSL / Matrix Time-Attendance & Electromagnetic Door Lock Access Control',
+        unit: 'Nos',
+        price: 8500,
+        category: 'CCTV & Biometrics'
+      },
+      {
+        id: 'p_fg40',
+        title: 'FortiGate 40F Next-Gen Firewall',
+        specs: 'Enterprise UTM Security Appliance, IPSec/SSL VPN & Dual-WAN Failover Setup',
+        unit: 'Nos',
+        price: 40000,
+        category: 'IT & Firewalls'
+      },
+      {
+        id: 'p_dell',
+        title: 'Dell Vostro Core i5 Business Desktop',
+        specs: 'Intel Core i5, 16GB RAM, 512GB NVMe SSD, Windows 11 Pro & Onsite Warranty',
+        unit: 'Nos',
+        price: 45000,
+        category: 'IT & Firewalls'
+      },
+      {
+        id: 'p_wifi',
+        title: 'Ceiling PoE Wi-Fi 6 Access Point',
+        specs: 'TP-Link Omada Seamless Roaming Enterprise Wi-Fi 6 AP & Structured LAN Termination',
+        unit: 'Nos',
+        price: 7000,
+        category: 'IT & Firewalls'
+      },
+      {
+        id: 'p_sol3',
+        title: '3kW On-Grid Rooftop Solar System',
+        specs: 'Mono PERC Bifacial Panels, On-Grid Inverter, AC/DC DB, Earthing & KSEB Net-Metering (₹78,000 PM Surya Ghar Subsidy Eligible)',
+        unit: 'Kit',
+        price: 220000,
+        category: 'Rooftop Solar',
+        isSolar: true
+      },
+      {
+        id: 'p_sol5',
+        title: '5kW On-Grid Rooftop Solar System',
+        specs: 'High-Efficiency Rooftop Solar Plant with KSEB Net-Metering & Documentation (₹78,000 PM Surya Ghar Subsidy Eligible)',
+        unit: 'Kit',
+        price: 310000,
+        category: 'Rooftop Solar',
+        isSolar: true
+      },
+      {
+        id: 'p_web',
+        title: 'Custom Business Website & Microsoft 365 Setup',
+        specs: 'Mobile-Responsive Website, Domain, SSL Hosting & Business Email Configuration',
+        unit: 'Lot',
+        price: 15000,
+        category: 'Web & M365'
+      },
+      {
+        id: 'p_cable',
+        title: 'Concealed Conduit Cabling & Rack Termination',
+        specs: 'CAT6 Pure Copper Cabling, Heavy-Duty PVC Conduit, Patch Panel & Wall-Mount Rack Dressing',
+        unit: 'Lot',
+        price: 3500,
+        category: 'CCTV & Biometrics'
+      }
+    ];
+
+    let lineItems = [];
+
+    const formatINR = (num) => {
+      const rounded = Math.round(Number(num) || 0);
+      return '₹' + rounded.toLocaleString('en-IN');
+    };
+
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      const style = type === 'error'
+        ? 'bg-navy-950 border-rose-500/50 text-rose-200'
+        : 'bg-navy-950 border-sky-400/50 text-white';
+      toast.className = `pointer-events-auto px-4 py-3 rounded-xl border ${style} shadow-2xl text-xs font-bold flex items-center gap-2.5 transition-all duration-300`;
+      toast.innerHTML = `<span class="w-2 h-2 rounded-full ${type === 'error' ? 'bg-rose-400' : 'bg-emerald-400'}"></span><span>${message}</span>`;
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(8px)';
+        setTimeout(() => toast.remove(), 280);
+      }, 2600);
+    }
+
+    function generateQuoteNumber() {
+      const year = new Date().getFullYear();
+      const rand = Math.floor(100 + Math.random() * 899);
+      return `GL-QT-${year}-${rand}`;
+    }
+
+    function getTodayISO() {
+      const d = new Date();
+      const offset = d.getTimezoneOffset();
+      const local = new Date(d.getTime() - offset * 60 * 1000);
+      return local.toISOString().split('T')[0];
+    }
+
+    function formatReadableDate(iso) {
+      if (!iso) return '—';
+      const parts = iso.split('-');
+      if (parts.length !== 3) return iso;
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      return `${parts[2]} ${months[parseInt(parts[1], 10) - 1]} ${parts[0]}`;
+    }
+
+    // Render Preset Catalog Buttons in Left Panel
+    function renderPresetCatalog() {
+      const container = document.getElementById('presetCatalogList');
+      container.innerHTML = PRESET_CATALOG.map(item => `
+        <button
+          type="button"
+          onclick="addPresetItem('${item.id}')"
+          class="w-full text-left p-3 rounded-xl bg-navy-900 hover:bg-navy-700/80 border border-white/10 hover:border-sky-400/40 transition-all flex items-center justify-between gap-3 group"
+        >
+          <div class="min-w-0">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-white truncate group-hover:text-sky-300 transition-colors">${item.title}</span>
+            </div>
+            <p class="text-[11px] text-slate-400 truncate mt-0.5">${item.specs}</p>
+          </div>
+          <div class="shrink-0 text-right">
+            <span class="text-xs font-extrabold text-sky-400 block">${formatINR(item.price)}</span>
+            <span class="text-[10px] text-slate-400 font-semibold">+ Add</span>
+          </div>
+        </button>
+      `).join('');
+    }
+
+    function addPresetItem(presetId) {
+      const preset = PRESET_CATALOG.find(p => p.id === presetId);
+      if (!preset) return;
+
+      const existing = lineItems.find(i => i.presetId === presetId);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        lineItems.push({
+          uid: 'li_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
+          presetId: preset.id,
+          title: preset.title,
+          specs: preset.specs,
+          qty: 1,
+          unit: preset.unit,
+          price: preset.price
+        });
+      }
+
+      if (preset.isSolar) {
+        document.getElementById('solarSubsidyToggle').checked = true;
+        document.getElementById('quoteCategory').value = 'Rooftop Solar';
+      }
+
+      renderEditorItems();
+      renderPreview();
+      showToast(`Added: ${preset.title}`);
+    }
+
+    function addCustomItem() {
+      const descInput = document.getElementById('customDesc');
+      const qtyInput = document.getElementById('customQty');
+      const unitInput = document.getElementById('customUnit');
+      const priceInput = document.getElementById('customPrice');
+
+      const rawText = descInput.value.trim();
+      const qty = Math.max(1, parseInt(qtyInput.value, 10) || 1);
+      const unit = unitInput.value;
+      const price = Math.max(0, parseFloat(priceInput.value) || 0);
+
+      if (!rawText) {
+        showToast('Please enter item description & specifications.', 'error');
+        descInput.focus();
+        return;
+      }
+
+      lineItems.push({
+        uid: 'li_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
+        presetId: null,
+        title: rawText,
+        specs: '',
+        qty,
+        unit,
+        price
+      });
+
+      descInput.value = '';
+      qtyInput.value = '1';
+      priceInput.value = '';
+
+      renderEditorItems();
+      renderPreview();
+      showToast('Custom item added to quotation');
+    }
+
+    function updateLineItem(uid, field, value) {
+      const item = lineItems.find(i => i.uid === uid);
+      if (!item) return;
+
+      if (field === 'qty') {
+        item.qty = Math.max(1, parseInt(value, 10) || 1);
+      } else if (field === 'price') {
+        item.price = Math.max(0, parseFloat(value) || 0);
+      } else if (field === 'title') {
+        item.title = value;
+      } else if (field === 'unit') {
+        item.unit = value;
+      }
+      renderPreview();
+    }
+
+    function moveLineItem(index, dir) {
+      const target = index + dir;
+      if (target < 0 || target >= lineItems.length) return;
+      const temp = lineItems[index];
+      lineItems[index] = lineItems[target];
+      lineItems[target] = temp;
+      renderEditorItems();
+      renderPreview();
+    }
+
+    function removeLineItem(uid) {
+      lineItems = lineItems.filter(i => i.uid !== uid);
+      renderEditorItems();
+      renderPreview();
+    }
+
+    function renderEditorItems() {
+      const container = document.getElementById('editorLineItems');
+      document.getElementById('itemCountTag').textContent = `${lineItems.length} Item${lineItems.length === 1 ? '' : 's'}`;
+
+      if (!lineItems.length) {
+        container.innerHTML = `<p class="text-xs text-slate-400 text-center py-4">No items added yet. Click any preset item above or add a custom item.</p>`;
+        return;
+      }
+
+      container.innerHTML = lineItems.map((item, idx) => `
+        <div class="bg-navy-900 border border-white/10 rounded-xl p-3.5 space-y-2.5">
+          <div class="flex items-start justify-between gap-2">
+            <input
+              type="text"
+              value="${escapeHtml(item.title)}"
+              oninput="updateLineItem('${item.uid}', 'title', this.value)"
+              class="flex-1 bg-transparent border-b border-white/10 focus:border-sky-400 text-xs font-bold text-white pb-1 focus:outline-none"
+            />
+            <div class="flex items-center gap-1 shrink-0">
+              <button type="button" onclick="moveLineItem(${idx}, -1)" aria-label="Move up" class="p-1 rounded bg-white/5 hover:bg-white/10 text-slate-300 text-[10px]">↑</button>
+              <button type="button" onclick="moveLineItem(${idx}, 1)" aria-label="Move down" class="p-1 rounded bg-white/5 hover:bg-white/10 text-slate-300 text-[10px]">↓</button>
+              <button type="button" onclick="removeLineItem('${item.uid}')" aria-label="Delete item" class="p-1 rounded bg-rose-500/15 hover:bg-rose-500/30 text-rose-300 text-[10px] font-bold">✕</button>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-2">
+            <div>
+              <label class="block text-[10px] text-slate-400">Qty</label>
+              <input type="number" min="1" value="${item.qty}" oninput="updateLineItem('${item.uid}', 'qty', this.value)" class="w-full bg-navy-950 border border-white/10 rounded-lg px-2.5 py-1.5 text-xs text-white" />
+            </div>
+            <div>
+              <label class="block text-[10px] text-slate-400">Unit</label>
+              <select onchange="updateLineItem('${item.uid}', 'unit', this.value)" class="w-full bg-navy-950 border border-white/10 rounded-lg px-2 py-1.5 text-xs text-white">
+                <option value="Nos" ${item.unit === 'Nos' ? 'selected' : ''}>Nos</option>
+                <option value="Kit" ${item.unit === 'Kit' ? 'selected' : ''}>Kit</option>
+                <option value="Mtr" ${item.unit === 'Mtr' ? 'selected' : ''}>Mtr</option>
+                <option value="Lot" ${item.unit === 'Lot' ? 'selected' : ''}>Lot</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[10px] text-slate-400">Rate (₹)</label>
+              <input type="number" min="0" value="${item.price}" oninput="updateLineItem('${item.uid}', 'price', this.value)" class="w-full bg-navy-950 border border-white/10 rounded-lg px-2.5 py-1.5 text-xs text-white" />
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function calculateTotals() {
+      const subtotal = lineItems.reduce((sum, item) => sum + (item.qty * item.price), 0);
+      const discType = document.getElementById('discountType').value;
+      const discVal = Math.max(0, parseFloat(document.getElementById('discountValue').value) || 0);
+
+      let discountAmt = 0;
+      if (discType === 'percent') {
+        discountAmt = Math.min(subtotal, (subtotal * Math.min(100, discVal)) / 100);
+      } else {
+        discountAmt = Math.min(subtotal, discVal);
+      }
+
+      const afterDiscount = Math.max(0, subtotal - discountAmt);
+      const gstMode = document.getElementById('gstMode').value;
+
+      let taxableValue = afterDiscount;
+      let cgst = 0;
+      let sgst = 0;
+      let grandTotal = afterDiscount;
+
+      if (gstMode === 'extra') {
+        taxableValue = afterDiscount;
+        cgst = taxableValue * 0.09;
+        sgst = taxableValue * 0.09;
+        grandTotal = taxableValue + cgst + sgst;
+      } else if (gstMode === 'included') {
+        taxableValue = afterDiscount / 1.18;
+        cgst = taxableValue * 0.09;
+        sgst = taxableValue * 0.09;
+        grandTotal = afterDiscount;
+      }
+
+      const applySolarSubsidy = document.getElementById('solarSubsidyToggle').checked;
+      const subsidyAmt = applySolarSubsidy ? 78000 : 0;
+      const netSolarCost = Math.max(0, grandTotal - subsidyAmt);
+
+      return {
+        subtotal,
+        discType,
+        discVal,
+        discountAmt,
+        taxableValue,
+        gstMode,
+        cgst,
+        sgst,
+        grandTotal,
+        applySolarSubsidy,
+        subsidyAmt,
+        netSolarCost
+      };
+    }
+
+    function renderPreview() {
+      // Metadata
+      document.getElementById('prevQuoteNo').textContent = document.getElementById('quoteNumber').value.trim() || 'GL-QT-2026-104';
+      document.getElementById('prevCategoryBadge').textContent = document.getElementById('quoteCategory').value;
+      document.getElementById('prevDate').textContent = formatReadableDate(document.getElementById('quoteDate').value);
+      document.getElementById('prevValidity').textContent = document.getElementById('quoteValidity').value;
+
+      const exec = document.getElementById('salesExec').value.trim() || 'Mohammed Noufal E.A.';
+      document.getElementById('prevSalesExec').textContent = exec;
+      document.getElementById('prevSignExec').textContent = exec;
+
+      // Client Details
+      const clientName = document.getElementById('clientName').value.trim() || 'Valued Customer';
+      const clientPhone = document.getElementById('clientPhone').value.trim();
+      const clientDistrict = document.getElementById('clientDistrict').value;
+      const clientAddress = document.getElementById('clientAddress').value.trim();
+      const clientGstin = document.getElementById('clientGstin').value.trim();
+
+      document.getElementById('prevClientName').textContent = clientName;
+      document.getElementById('prevClientAddress').textContent = clientAddress
+        ? `${clientAddress}, ${clientDistrict}, Kerala`
+        : `${clientDistrict}, Kerala`;
+      document.getElementById('prevClientContact').textContent = clientPhone ? `Phone / WhatsApp: ${clientPhone}` : 'Phone / WhatsApp: —';
+
+      const gstinEl = document.getElementById('prevClientGstin');
+      if (clientGstin) {
+        gstinEl.textContent = `GSTIN: ${clientGstin}`;
+        gstinEl.classList.remove('hidden');
+      } else {
+        gstinEl.classList.add('hidden');
+      }
+
+      // Line Items Table
+      const tbody = document.getElementById('prevTableBody');
+      if (!lineItems.length) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="5" class="py-8 text-center text-xs text-slate-400">
+              Add items from the left panel to populate this quotation schedule.
+            </td>
+          </tr>
+        `;
+      } else {
+        tbody.innerHTML = lineItems.map((item, idx) => {
+          const lineTotal = item.qty * item.price;
+          return `
+            <tr class="align-top">
+              <td class="py-3.5 px-3 text-center font-semibold text-slate-500">${idx + 1}</td>
+              <td class="py-3.5 px-3">
+                <p class="font-bold text-slate-900">${escapeHtml(item.title)}</p>
+                ${item.specs ? `<p class="text-[11px] text-slate-500 mt-0.5 leading-relaxed">${escapeHtml(item.specs)}</p>` : ''}
+              </td>
+              <td class="py-3.5 px-3 text-center font-semibold text-slate-800 whitespace-nowrap">${item.qty} ${escapeHtml(item.unit)}</td>
+              <td class="py-3.5 px-3 text-right font-medium text-slate-700 whitespace-nowrap">${formatINR(item.price)}</td>
+              <td class="py-3.5 px-3 text-right font-bold text-slate-900 whitespace-nowrap">${formatINR(lineTotal)}</td>
+            </tr>
+          `;
+        }).join('');
+      }
+
+      // Financial Summary
+      const totals = calculateTotals();
+      document.getElementById('prevSubtotal').textContent = formatINR(totals.subtotal);
+
+      const discRow = document.getElementById('prevDiscountRow');
+      if (totals.discountAmt > 0) {
+        discRow.classList.remove('hidden');
+        document.getElementById('prevDiscountLabel').textContent =
+          totals.discType === 'percent' ? `Discount (${totals.discVal}%)` : 'Special Discount';
+        document.getElementById('prevDiscountAmt').textContent = `− ${formatINR(totals.discountAmt)}`;
+      } else {
+        discRow.classList.add('hidden');
+      }
+
+      const taxableRow = document.getElementById('prevTaxableRow');
+      const cgstRow = document.getElementById('prevCgstRow');
+      const sgstRow = document.getElementById('prevSgstRow');
+      const gstIncNote = document.getElementById('prevGstIncludedNote');
+
+      if (totals.gstMode === 'extra') {
+        taxableRow.classList.remove('hidden');
+        cgstRow.classList.remove('hidden');
+        sgstRow.classList.remove('hidden');
+        gstIncNote.classList.add('hidden');
+        document.getElementById('prevTaxableAmt').textContent = formatINR(totals.taxableValue);
+        document.getElementById('prevCgstAmt').textContent = formatINR(totals.cgst);
+        document.getElementById('prevSgstAmt').textContent = formatINR(totals.sgst);
+      } else if (totals.gstMode === 'included') {
+        taxableRow.classList.add('hidden');
+        cgstRow.classList.remove('hidden');
+        sgstRow.classList.remove('hidden');
+        gstIncNote.classList.remove('hidden');
+        document.getElementById('prevCgstAmt').textContent = formatINR(totals.cgst);
+        document.getElementById('prevSgstAmt').textContent = formatINR(totals.sgst);
+      } else {
+        taxableRow.classList.add('hidden');
+        cgstRow.classList.add('hidden');
+        sgstRow.classList.add('hidden');
+        gstIncNote.classList.add('hidden');
+      }
+
+      document.getElementById('prevGrandTotal').textContent = formatINR(totals.grandTotal);
+
+      // Solar Subsidy Row
+      const subsidyRow = document.getElementById('prevSubsidyRow');
+      const netSolarRow = document.getElementById('prevNetSolarRow');
+      const subsidyNoteBox = document.getElementById('prevSubsidyNoteBox');
+
+      if (totals.applySolarSubsidy) {
+        subsidyRow.classList.remove('hidden');
+        netSolarRow.classList.remove('hidden');
+        subsidyNoteBox.classList.remove('hidden');
+        document.getElementById('prevNetSolarAmt').textContent = formatINR(totals.netSolarCost);
+      } else {
+        subsidyRow.classList.add('hidden');
+        netSolarRow.classList.add('hidden');
+        subsidyNoteBox.classList.add('hidden');
+      }
+
+      // Terms
+      document.getElementById('prevTerms').textContent = document.getElementById('termsNotes').value;
+    }
+
+    function buildWhatsAppText() {
+      const qNo = document.getElementById('quoteNumber').value.trim() || 'GL-QT-2026-104';
+      const qDate = formatReadableDate(document.getElementById('quoteDate').value);
+      const validity = document.getElementById('quoteValidity').value;
+      const clientName = document.getElementById('clientName').value.trim() || 'Valued Customer';
+      const district = document.getElementById('clientDistrict').value;
+      const address = document.getElementById('clientAddress').value.trim();
+      const totals = calculateTotals();
+
+      const itemsText = lineItems.map((item, idx) =>
+        `${idx + 1}. ${item.title} (${item.qty} ${item.unit}) = ${formatINR(item.qty * item.price)}`
+      ).join('\n');
+
+      let msg = `*GLOBALLINKS — OFFICIAL QUOTATION*\n`;
+      msg += `Quote ID: *${qNo}* | Date: ${qDate}\n`;
+      msg += `Client: *${clientName}*\n`;
+      msg += `Location: ${address ? address + ', ' : ''}${district}, Kerala\n\n`;
+      msg += `*Itemized Schedule:*\n${itemsText || 'Custom Project Estimate'}\n\n`;
+      msg += `Subtotal: ${formatINR(totals.subtotal)}\n`;
+      if (totals.discountAmt > 0) msg += `Discount: -${formatINR(totals.discountAmt)}\n`;
+      if (totals.gstMode === 'extra') {
+        msg += `CGST (9%) + SGST (9%): ${formatINR(totals.cgst + totals.sgst)}\n`;
+      } else if (totals.gstMode === 'included') {
+        msg += `(Includes 18% GST: ${formatINR(totals.cgst + totals.sgst)})\n`;
+      }
+      msg += `*Total Quoted Amount: ${formatINR(totals.grandTotal)}*\n`;
+      if (totals.applySolarSubsidy) {
+        msg += `PM Surya Ghar Direct Bank Subsidy: -₹78,000\n`;
+        msg += `*Effective Net Solar Cost: ${formatINR(totals.netSolarCost)}*\n`;
+      }
+      msg += `\nValid for ${validity}. Free on-site survey across Kerala.\n`;
+      msg += `Store & Catalog: https://noufinaz.github.io\n`;
+      msg += `GLOBALLINKS Desk: +91 81370 70365`;
+      return msg;
+    }
+
+    function sendQuoteViaWhatsApp() {
+      if (!lineItems.length) {
+        showToast('Please add at least one item before sending via WhatsApp.', 'error');
+        return;
+      }
+
+      const rawPhone = document.getElementById('clientPhone').value.replace(/\D/g, '');
+      let targetPhone = WA_DESK_NUMBER;
+      if (rawPhone.length === 10) {
+        targetPhone = '91' + rawPhone;
+      } else if (rawPhone.length >= 11) {
+        targetPhone = rawPhone;
+      }
+
+      const text = buildWhatsAppText();
+      window.open(`https://wa.me/${targetPhone}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+      showToast('Opening WhatsApp with formatted quotation...');
+    }
+
+    function copyQuoteSummary() {
+      const text = buildWhatsAppText();
+      const tempArea = document.createElement('textarea');
+      tempArea.value = text;
+      document.body.appendChild(tempArea);
+      tempArea.select();
+      try {
+        document.execCommand('copy');
+        showToast('Quotation summary copied to clipboard');
+      } catch (err) {
+        showToast('Unable to copy summary', 'error');
+      }
+      document.body.removeChild(tempArea);
+    }
+
+    function saveDraft() {
+      const payload = {
+        quoteNumber: document.getElementById('quoteNumber').value,
+        quoteDate: document.getElementById('quoteDate').value,
+        quoteValidity: document.getElementById('quoteValidity').value,
+        quoteCategory: document.getElementById('quoteCategory').value,
+        salesExec: document.getElementById('salesExec').value,
+        clientName: document.getElementById('clientName').value,
+        clientPhone: document.getElementById('clientPhone').value,
+        clientDistrict: document.getElementById('clientDistrict').value,
+        clientAddress: document.getElementById('clientAddress').value,
+        clientGstin: document.getElementById('clientGstin').value,
+        discountType: document.getElementById('discountType').value,
+        discountValue: document.getElementById('discountValue').value,
+        gstMode: document.getElementById('gstMode').value,
+        solarSubsidyToggle: document.getElementById('solarSubsidyToggle').checked,
+        termsNotes: document.getElementById('termsNotes').value,
+        lineItems
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      showToast('Quotation draft saved locally');
+    }
+
+    function loadDraft(silent = false) {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) {
+        if (!silent) showToast('No saved quotation draft found', 'error');
+        return false;
+      }
+      try {
+        const d = JSON.parse(raw);
+        document.getElementById('quoteNumber').value = d.quoteNumber || generateQuoteNumber();
+        document.getElementById('quoteDate').value = d.quoteDate || getTodayISO();
+        document.getElementById('quoteValidity').value = d.quoteValidity || '15 Days';
+        document.getElementById('quoteCategory').value = d.quoteCategory || 'CCTV & Biometrics';
+        document.getElementById('salesExec').value = d.salesExec || 'Mohammed Noufal E.A.';
+        document.getElementById('clientName').value = d.clientName || '';
+        document.getElementById('clientPhone').value = d.clientPhone || '';
+        document.getElementById('clientDistrict').value = d.clientDistrict || 'Kottayam';
+        document.getElementById('clientAddress').value = d.clientAddress || '';
+        document.getElementById('clientGstin').value = d.clientGstin || '';
+        document.getElementById('discountType').value = d.discountType || 'flat';
+        document.getElementById('discountValue').value = d.discountValue || 0;
+        document.getElementById('gstMode').value = d.gstMode || 'none';
+        document.getElementById('solarSubsidyToggle').checked = Boolean(d.solarSubsidyToggle);
+        if (d.termsNotes) document.getElementById('termsNotes').value = d.termsNotes;
+        lineItems = Array.isArray(d.lineItems) ? d.lineItems : [];
+
+        renderEditorItems();
+        renderPreview();
+        if (!silent) showToast('Saved draft restored');
+        return true;
+      } catch (e) {
+        if (!silent) showToast('Could not read saved draft', 'error');
+        return false;
+      }
+    }
+
+    function resetNewQuote() {
+      document.getElementById('quoteNumber').value = generateQuoteNumber();
+      document.getElementById('quoteDate').value = getTodayISO();
+      document.getElementById('quoteValidity').value = '15 Days';
+      document.getElementById('quoteCategory').value = 'CCTV & Biometrics';
+      document.getElementById('salesExec').value = 'Mohammed Noufal E.A.';
+      document.getElementById('clientName').value = '';
+      document.getElementById('clientPhone').value = '';
+      document.getElementById('clientDistrict').value = 'Kottayam';
+      document.getElementById('clientAddress').value = '';
+      document.getElementById('clientGstin').value = '';
+      document.getElementById('discountType').value = 'flat';
+      document.getElementById('discountValue').value = '0';
+      document.getElementById('gstMode').value = 'none';
+      document.getElementById('solarSubsidyToggle').checked = false;
+
+      // Pre-populate with flagship 4-Camera CCTV Package so preview looks executive immediately
+      const defaultItem = PRESET_CATALOG[0];
+      lineItems = [{
+        uid: 'li_init_1',
+        presetId: defaultItem.id,
+        title: defaultItem.title,
+        specs: defaultItem.specs,
+        qty: 1,
+        unit: defaultItem.unit,
+        price: defaultItem.price
+      }];
+
+      renderEditorItems();
+      renderPreview();
+      showToast('Started a fresh quotation');
+    }
+
+    // Boot Application
+    window.addEventListener('DOMContentLoaded', () => {
+      renderPresetCatalog();
+      const restored = loadDraft(true);
+      if (!restored) {
+        resetNewQuote();
+      }
+    });
+  </script>
+</body>
+</html>
