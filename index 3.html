@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GLOBALLINKS — Smart Security, IT Infrastructure & Solar Store | Kerala</title>
+  <meta name="description" content="Shop Hikvision & CP Plus CCTV packages, biometric access, Fortinet firewalls, Dell systems, and subsidized rooftop solar in Kerala. Free site survey." />
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas: '#FAF9F6',
+            ink: '#1A1A1A',
+            stone: '#F2EFE9',
+            terracotta: '#C86D51',
+            terracottaDark: '#B05A40',
+            muted: '#66635E',
+            borderSand: '#E5E0D8',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      background-color: #FAF9F6;
+      color: #1A1A1A;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+    .glass-nav {
+      background: rgba(250, 249, 246, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-terracotta/20 selection:text-ink">
+
+  <!-- 1. ANNOUNCEMENT BAR -->
+  <div class="bg-ink text-canvas text-xs sm:text-sm py-2.5 px-4 text-center tracking-wide">
+    <p class="font-medium">
+      Free On-Site Survey Across Kerala &nbsp;·&nbsp;
+      <span class="text-terracotta font-semibold">₹78,000 Govt. Solar Subsidy</span> Credited Direct to Your Bank
+    </p>
+  </div>
+
+  <!-- 2. STICKY GLASSMORPHISM NAVBAR -->
+  <header id="navbar" class="sticky top-0 z-40 transition-all duration-300 border-b border-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-ink text-canvas flex items-center justify-center shadow-sm group-hover:bg-terracotta transition-colors">
+          <svg class="w-6 h-6" viewBox="0 0 48 48" fill="none">
+            <path d="M24 3l17 6v14c0 10.5-7.5 18-17 22C14.5 41 7 33.5 7 23V9l17-6z" stroke="currentColor" stroke-width="2.5"/>
+            <rect x="12" y="19" width="15" height="9" rx="4.5" stroke="currentColor" stroke-width="2.2"/>
+            <rect x="21" y="24" width="15" height="9" rx="4.5" stroke="#C86D51" stroke-width="2.2"/>
+          </svg>
+        </div>
+        <div>
+          <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight block leading-none">GLOBALLINKS</span>
+          <span class="text-[10px] uppercase tracking-[0.2em] text-muted font-semibold">Security · IT · Solar</span>
+        </div>
+      </a>
+
+      <!-- Centered Navigation -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/80">
+        <a href="#collections" class="hover:text-terracotta transition-colors">Collections</a>
+        <a href="#featured" class="hover:text-terracotta transition-colors">Featured Gear</a>
+        <a href="#solar" class="hover:text-terracotta transition-colors">Solar Subsidy</a>
+        <a href="#about" class="hover:text-terracotta transition-colors">Why Us</a>
+      </nav>
+
+      <!-- Right Actions: Search + Free Survey + Cart -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button id="searchToggle" aria-label="Search catalog" class="p-2.5 rounded-full hover:bg-stone transition-colors">
+          <i data-lucide="search" class="w-5 h-5"></i>
+        </button>
+        <a href="https://wa.me/918137070365?text=Hello%20Globallinks%2C%20I%20would%20like%20to%20book%20a%20free%20site%20survey." target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-full border border-borderSand hover:border-ink transition-colors">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-terracotta"></i>
+          Free Survey
+        </a>
+        <button id="cartOpenBtn" aria-label="Open cart" class="relative flex items-center gap-2 bg-ink text-canvas hover:bg-terracotta transition-colors px-4 py-2.5 rounded-full text-sm font-semibold shadow-sm">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span class="hidden sm:inline">Cart</span>
+          <span id="cartBadge" class="bg-terracotta text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center transition-transform">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Expandable Search Bar -->
+    <div id="searchBar" class="hidden border-t border-borderSand bg-canvas/95 px-4 py-3">
+      <div class="max-w-2xl mx-auto relative flex items-center">
+        <i data-lucide="search" class="w-4 h-4 text-muted absolute left-4"></i>
+        <input id="searchInput" type="search" placeholder="Search CCTV packages, PoE NVR, FortiGate, Dell, 3kW Solar..." class="w-full bg-stone border border-borderSand rounded-full pl-11 pr-10 py-2.5 text-sm focus:outline-none focus:border-terracotta" />
+        <button id="searchClose" class="absolute right-3 text-muted hover:text-ink">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. FULL-BLEED AESTHETIC HERO SECTION -->
+  <section class="relative overflow-hidden border-b border-borderSand">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <!-- Left Editorial Copy -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone border border-borderSand text-xs font-semibold tracking-wider uppercase text-muted">
+            <span class="w-2 h-2 rounded-full bg-terracotta"></span>
+            Kerala · Residential &amp; Enterprise
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.08] tracking-tight text-ink">
+            Architectural Security &amp; <span class="italic font-normal text-terracotta">Seamless</span> IT Infrastructure.
+          </h1>
+
+          <p class="text-base sm:text-lg text-muted max-w-xl leading-relaxed">
+            Curated IP surveillance, enterprise firewalls, Dell workstations, and subsidy-backed rooftop solar—engineered, neatly cabled, and supported across Kerala.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#featured" class="inline-flex items-center gap-2 bg-ink text-canvas hover:bg-terracotta transition-colors px-7 py-4 rounded-full text-sm font-semibold shadow-sm">
+              Explore Solutions
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/918137070365?text=Hello%20Globallinks%2C%20I%20need%20a%20free%20site%20survey%20and%20quote." target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-stone hover:bg-borderSand/70 text-ink px-6 py-4 rounded-full text-sm font-semibold transition-colors">
+              Book Free Site Survey
+            </a>
+          </div>
+
+          <!-- Trust Metrics -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-borderSand">
+            <div>
+              <p class="font-serif text-2xl font-bold text-ink">₹16,000</p>
+              <p class="text-xs text-muted mt-0.5">4-Cam CCTV Kits From</p>
+            </div>
+            <div>
+              <p class="font-serif text-2xl font-bold text-terracotta">₹78,000</p>
+              <p class="text-xs text-muted mt-0.5">Direct Solar Subsidy</p>
+            </div>
+            <div>
+              <p class="font-serif text-2xl font-bold text-ink">24/7</p>
+              <p class="text-xs text-muted mt-0.5">Mobile Remote View</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual -->
+        <div class="lg:col-span-6">
+          <div class="relative rounded-2xl overflow-hidden bg-stone aspect-[4/3] shadow-lg group">
+            <img
+              src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1400&q=85"
+              alt="Modern smart home security camera and minimalist architecture"
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent"></div>
+            <div class="absolute bottom-5 left-5 right-5 sm:bottom-7 sm:left-7 sm:right-7 bg-canvas/95 backdrop-blur-md p-4 sm:p-5 rounded-xl border border-borderSand flex items-center justify-between gap-4">
+              <div>
+                <p class="text-xs uppercase tracking-wider text-terracotta font-bold">Turnkey Installation</p>
+                <p class="font-serif text-base sm:text-lg font-semibold text-ink">Hikvision &amp; CP Plus IP PoE Systems</p>
+              </div>
+              <a href="#featured" class="shrink-0 w-10 h-10 rounded-full bg-ink text-canvas flex items-center justify-center hover:bg-terracotta transition-colors" aria-label="View CCTV">
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CURATED CATEGORY GRID (3 COLUMNS) -->
+  <section id="collections" class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-terracotta">Curated Departments</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-semibold mt-2">Core Infrastructure</h2>
+      </div>
+      <p class="text-sm text-muted max-w-md">Select a department to filter hardware packages and turnkey installation services.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+      <!-- Category 1 -->
+      <button onclick="filterByCategory('CCTV & Access')" class="group relative rounded-xl overflow-hidden aspect-[4/5] text-left bg-stone shadow-sm">
+        <img
+          src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=900&q=80"
+          alt="CCTV and Biometric Access Control"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 text-canvas">
+          <span class="text-xs uppercase tracking-widest text-white/80 font-medium">Surveillance &amp; Biometrics</span>
+          <h3 class="font-serif text-2xl font-semibold mt-1">CCTV &amp; Access Control</h3>
+          <p class="text-xs text-white/80 mt-2 flex items-center gap-1.5 font-medium">
+            Shop IP Cameras, PoE NVR &amp; Attendance <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </p>
+        </div>
+      </button>
+
+      <!-- Category 2 -->
+      <button onclick="filterByCategory('IT & Networking')" class="group relative rounded-xl overflow-hidden aspect-[4/5] text-left bg-stone shadow-sm">
+        <img
+          src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=900&q=80"
+          alt="Dell Workstations, Servers and Firewalls"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 text-canvas">
+          <span class="text-xs uppercase tracking-widest text-white/80 font-medium">Enterprise &amp; Office</span>
+          <h3 class="font-serif text-2xl font-semibold mt-1">IT, Firewalls &amp; Dell Systems</h3>
+          <p class="text-xs text-white/80 mt-2 flex items-center gap-1.5 font-medium">
+            Shop FortiGate, Switches &amp; Microsoft 365 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </p>
+        </div>
+      </button>
+
+      <!-- Category 3 -->
+      <button onclick="filterByCategory('Solar & Web')" class="group relative rounded-xl overflow-hidden aspect-[4/5] text-left bg-stone shadow-sm">
+        <img
+          src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80"
+          alt="Rooftop Solar Panels with Subsidy"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 text-canvas">
+          <span class="text-xs uppercase tracking-widest text-white/80 font-medium">Clean Energy &amp; Digital</span>
+          <h3 class="font-serif text-2xl font-semibold mt-1">Solar Power &amp; Web Studio</h3>
+          <p class="text-xs text-white/80 mt-2 flex items-center gap-1.5 font-medium">
+            3kW / 5kW Solar &amp; Business Websites <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </p>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <!-- 5. FEATURED PRODUCTS GRID (4 COLS DESKTOP, 2 COLS MOBILE) -->
+  <section id="featured" class="py-16 lg:py-24 bg-stone/60 border-y border-borderSand">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-terracotta">Catalog &amp; Packages</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-semibold mt-2">Featured Solutions</h2>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div id="categoryTabs" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- 8 Product Cards Grid -->
+      <div id="productGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+        <!-- Populated by JS -->
+      </div>
+
+      <p class="text-xs text-muted mt-8 text-center">
+        * Indicative Kerala market pricing (Nov 2026). GST extra as applicable. Final quote confirmed after free on-site survey.
+      </p>
+    </div>
+  </section>
+
+  <!-- SOLAR SUBSIDY HIGHLIGHT BANNER -->
+  <section id="solar" class="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-ink text-canvas rounded-2xl p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-7 space-y-4">
+        <span class="inline-block px-3 py-1 rounded-full bg-terracotta/20 text-terracotta text-xs font-bold uppercase tracking-widest">
+          PM Surya Ghar · Kerala Subsidy
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
+          Go Solar. Receive <span class="text-terracotta">₹78,000</span> Back in Your Bank.
+        </h2>
+        <p class="text-white/75 text-sm sm:text-base max-w-xl leading-relaxed">
+          Complete on-grid rooftop solar installation with net-metering paperwork. Government subsidy is credited directly to your bank account. (Extra structural welding charged separately if required.)
+        </p>
+      </div>
+      <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+          <p class="text-xs uppercase tracking-wider text-white/60">3kW Rooftop System</p>
+          <p class="text-sm line-through text-white/40 mt-2">₹2,20,000</p>
+          <p class="font-serif text-3xl font-bold text-terracotta mt-0.5">₹1,42,000</p>
+          <p class="text-xs text-white/70 mt-2">Effective net cost after subsidy</p>
+          <button onclick="addToCart('s1')" class="mt-4 w-full py-2.5 rounded-lg bg-canvas text-ink hover:bg-terracotta hover:text-white transition-colors text-xs font-bold">
+            Add 3kW Package
+          </button>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+          <p class="text-xs uppercase tracking-wider text-white/60">5kW Rooftop System</p>
+          <p class="text-sm line-through text-white/40 mt-2">₹3,10,000</p>
+          <p class="font-serif text-3xl font-bold text-terracotta mt-0.5">₹2,32,000</p>
+          <p class="text-xs text-white/70 mt-2">Effective net cost after subsidy</p>
+          <button onclick="addToCart('s2')" class="mt-4 w-full py-2.5 rounded-lg bg-canvas text-ink hover:bg-terracotta hover:text-white transition-colors text-xs font-bold">
+            Add 5kW Package
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS / ABOUT -->
+  <section id="about" class="py-12 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-stone p-6 rounded-xl border border-borderSand">
+        <span class="font-serif text-2xl font-bold text-terracotta">01</span>
+        <h3 class="font-serif text-lg font-semibold mt-3">Select or Enquire</h3>
+        <p class="text-sm text-muted mt-1.5">Add hardware packages to your cart or send your requirement directly on WhatsApp.</p>
+      </div>
+      <div class="bg-stone p-6 rounded-xl border border-borderSand">
+        <span class="font-serif text-2xl font-bold text-terracotta">02</span>
+        <h3 class="font-serif text-lg font-semibold mt-3">Free Site Survey</h3>
+        <p class="text-sm text-muted mt-1.5">Our engineers visit your home or office in Kerala to plan camera angles and cabling.</p>
+      </div>
+      <div class="bg-stone p-6 rounded-xl border border-borderSand">
+        <span class="font-serif text-2xl font-bold text-terracotta">03</span>
+        <h3 class="font-serif text-lg font-semibold mt-3">Transparent Quote</h3>
+        <p class="text-sm text-muted mt-1.5">Clear itemized pricing with zero hidden fees before installation begins.</p>
+      </div>
+      <div class="bg-stone p-6 rounded-xl border border-borderSand">
+        <span class="font-serif text-2xl font-bold text-terracotta">04</span>
+        <h3 class="font-serif text-lg font-semibold mt-3">Neat Execution</h3>
+        <p class="text-sm text-muted mt-1.5">Genuine hardware, concealed conduit cabling, and mobile app configuration.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. MINIMALIST EDITORIAL FOOTER -->
+  <footer class="bg-stone border-t border-borderSand pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-borderSand">
+        <!-- Brand & Newsletter -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-2.5">
+            <span class="font-serif text-2xl font-bold tracking-tight">GLOBALLINKS</span>
+          </div>
+          <p class="text-sm text-muted max-w-sm leading-relaxed">
+            Authorized IT infrastructure, Hikvision IP surveillance, biometric access, and rooftop solar specialists serving homes and businesses across Kerala.
+          </p>
+          <form id="newsletterForm" class="flex gap-2 max-w-sm pt-2">
+            <input type="email" required placeholder="Enter email for rate cards & offers" class="flex-1 bg-canvas border border-borderSand rounded-full px-4 py-2.5 text-sm focus:outline-none focus:border-terracotta" />
+            <button type="submit" class="bg-ink text-canvas hover:bg-terracotta transition-colors px-5 py-2.5 rounded-full text-sm font-semibold">
+              Join
+            </button>
+          </form>
+          <p id="newsletterMsg" class="text-xs text-terracotta font-medium hidden">Thank you! We will share our latest catalog updates.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-ink">Solutions</h4>
+          <ul class="space-y-2 text-sm text-muted">
+            <li><a href="#featured" onclick="filterByCategory('CCTV & Access')" class="hover:text-terracotta transition-colors">IP CCTV &amp; PoE NVR</a></li>
+            <li><a href="#featured" onclick="filterByCategory('CCTV & Access')" class="hover:text-terracotta transition-colors">Biometric Attendance</a></li>
+            <li><a href="#featured" onclick="filterByCategory('IT & Networking')" class="hover:text-terracotta transition-colors">Dell &amp; FortiGate Firewalls</a></li>
+            <li><a href="#solar" class="hover:text-terracotta transition-colors">Rooftop Solar (₹78k Subsidy)</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-ink">Direct Desk · Kerala</h4>
+          <ul class="space-y-2.5 text-sm text-muted">
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="phone" class="w-4 h-4 text-terracotta"></i>
+              <a href="tel:+918137070365" class="hover:text-ink font-medium">+91 81370 70365</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="mail" class="w-4 h-4 text-terracotta"></i>
+              <a href="mailto:noufinaz@outlook.com" class="hover:text-ink">noufinaz@outlook.com</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-terracotta"></i>
+              <span>Kottayam · Thiruvalla · Kochi · All Kerala</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
+        <p>© 2026 Globallinks IT &amp; Security Systems. All rights reserved.</p>
+        <div class="flex items-center gap-5">
+          <a href="https://wa.me/918137070365" target="_blank" rel="noopener" class="hover:text-terracotta transition-colors flex items-center gap-1.5">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+          </a>
+          <a href="#featured" class="hover:text-terracotta transition-colors">Catalog</a>
+          <a href="#solar" class="hover:text-terracotta transition-colors">Solar Subsidy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 7. SLIDE-OVER SHOPPING CART & WHATSAPP CHECKOUT DRAWER -->
+  <div id="cartOverlay" class="fixed inset-0 bg-ink/50 backdrop-blur-xs z-50 hidden transition-opacity"></div>
+  <aside id="cartDrawer" class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-canvas z-50 shadow-2xl translate-x-full transition-transform duration-300 flex flex-col border-l border-borderSand">
+    <!-- Drawer Header -->
+    <div class="px-6 py-5 border-b border-borderSand flex items-center justify-between bg-stone/50">
+      <div class="flex items-center gap-2.5">
+        <i data-lucide="shopping-bag" class="w-5 h-5 text-terracotta"></i>
+        <h3 id="drawerTitle" class="font-serif text-xl font-semibold">Your Cart</h3>
+      </div>
+      <button id="cartCloseBtn" aria-label="Close cart" class="p-2 rounded-full hover:bg-stone transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Drawer Body (Dynamic Cart / Checkout Form) -->
+    <div id="drawerBody" class="flex-1 overflow-y-auto p-6"></div>
+
+    <!-- Drawer Footer -->
+    <div id="drawerFooter" class="p-6 border-t border-borderSand bg-stone/40"></div>
+  </aside>
+
+  <!-- JAVASCRIPT APPLICATION LOGIC -->
+  <script>
+    const WA_NUMBER = '918137070365';
+
+    const PRODUCTS = [
+      {
+        id: 'c1',
+        category: 'CCTV & Access',
+        title: '4-Camera IP PoE CCTV Package',
+        subtitle: '4x Hikvision/CP Plus IP cameras, PoE NVR, 1TB HDD & cabling',
+        price: 20000,
+        badge: 'Bestseller',
+        image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 'c2',
+        category: 'CCTV & Access',
+        title: '8-Camera Commercial CCTV Kit',
+        subtitle: '8x 5MP Night-Vision cameras, 8-ch NVR, 2TB surveillance HDD',
+        price: 40000,
+        badge: 'Shop & Office',
+        image: 'https://images.unsplash.com/photo-1580894894513-541e068a3e2b?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 'a1',
+        category: 'CCTV & Access',
+        title: 'Biometric Fingerprint & Face Terminal',
+        subtitle: 'eSSL / Matrix attendance & magnetic door access control',
+        price: 8500,
+        badge: null,
+        image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 'n4',
+        category: 'IT & Networking',
+        title: 'FortiGate 40F Next-Gen Firewall',
+        subtitle: 'Enterprise UTM security, VPN & dual-WAN failover setup',
+        price: 40000,
+        badge: 'Enterprise',
+        image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 'p1',
+        category: 'IT & Networking',
+        title: 'Dell Vostro Business Desktop',
+        subtitle: 'Intel Core i5, 16GB RAM, 512GB NVMe SSD, Windows 11 Pro',
+        price: 45000,
+        badge: 'Authorized',
+        image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 'n2',
+        category: 'IT & Networking',
+        title: 'Ceiling PoE Wi-Fi 6 Access Point',
+        subtitle: 'TP-Link Omada seamless roaming mesh & structured LAN',
+        price: 7000,
+        badge: null,
+        image: 'https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 's1',
+        category: 'Solar & Web',
+        title: '3kW On-Grid Rooftop Solar',
+        subtitle: '₹2,20,000 gross · ₹1,42,000 net after ₹78,000 bank subsidy',
+        price: 220000,
+        badge: '₹78k Subsidy',
+        image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 's2',
+        category: 'Solar & Web',
+        title: '5kW On-Grid Rooftop Solar',
+        subtitle: '₹3,10,000 gross · ₹2,32,000 net after ₹78,000 bank subsidy',
+        price: 310000,
+        badge: '₹78k Subsidy',
+        image: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 'w2',
+        category: 'Solar & Web',
+        title: 'Custom Business Website & M365',
+        subtitle: 'Responsive website, domain, hosting & Microsoft 365 email',
+        price: 15000,
+        badge: 'Turnkey',
+        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'
+      }
+    ];
+
+    const CATEGORIES = ['All', 'CCTV & Access', 'IT & Networking', 'Solar & Web'];
+    let selectedCategory = 'All';
+    let searchQuery = '';
+    let wishlist = new Set();
+    let cart = JSON.parse(localStorage.getItem('globallinks_editorial_cart') || '{}');
+    let drawerStep = 'cart';
+
+    const formatINR = (num) => '₹' + Number(num).toLocaleString('en-IN');
+
+    function saveCart() {
+      localStorage.setItem('globallinks_editorial_cart', JSON.stringify(cart));
+      updateCartBadge();
+    }
+
+    function updateCartBadge() {
+      const count = Object.values(cart).reduce((sum, qty) => sum + qty, 0);
+      document.getElementById('cartBadge').textContent = count;
+    }
+
+    function renderCategories() {
+      const container = document.getElementById('categoryTabs');
+      container.innerHTML = CATEGORIES.map(cat => {
+        const active = cat === selectedCategory;
+        return `
+          <button
+            onclick="filterByCategory('${cat}')"
+            class="px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
+              active
+                ? 'bg-ink text-canvas shadow-xs'
+                : 'bg-canvas text-ink/75 border border-borderSand hover:border-ink'
+            }"
+          >
+            ${cat}
+          </button>
+        `;
+      }).join('');
+    }
+
+    function filterByCategory(cat) {
+      selectedCategory = cat;
+      renderCategories();
+      renderProducts();
+      document.getElementById('featured').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function toggleWishlist(id) {
+      if (wishlist.has(id)) wishlist.delete(id);
+      else wishlist.add(id);
+      renderProducts();
+    }
+
+    function renderProducts() {
+      const grid = document.getElementById('productGrid');
+      const filtered = PRODUCTS.filter(p => {
+        const matchCat = selectedCategory === 'All' || p.category === selectedCategory;
+        const matchSearch =
+          !searchQuery ||
+          (p.title + ' ' + p.subtitle + ' ' + p.category).toLowerCase().includes(searchQuery.toLowerCase());
+        return matchCat && matchSearch;
+      });
+
+      if (!filtered.length) {
+        grid.innerHTML = `<div class="col-span-full text-center py-16 text-muted">No matching solutions found. Try another keyword.</div>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => {
+        const isWished = wishlist.has(p.id);
+        return `
+          <article class="group bg-canvas rounded-xl border border-borderSand overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md">
+            <div>
+              <div class="relative aspect-[4/3] bg-stone overflow-hidden">
+                <img
+                  src="${p.image}"
+                  alt="${p.title}"
+                  loading="lazy"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                ${p.badge ? `<span class="absolute top-3 left-3 bg-canvas/95 backdrop-blur-xs text-ink text-[11px] font-bold px-2.5 py-1 rounded-full border border-borderSand">${p.badge}</span>` : ''}
+                <button
+                  onclick="toggleWishlist('${p.id}')"
+                  aria-label="Toggle wishlist"
+                  class="absolute top-3 right-3 w-8 h-8 rounded-full bg-canvas/90 backdrop-blur-xs flex items-center justify-center text-ink hover:text-terracotta transition-colors"
+                >
+                  <i data-lucide="heart" class="w-4 h-4 ${isWished ? 'fill-terracotta text-terracotta' : ''}"></i>
+                </button>
+                <button
+                  onclick="addToCart('${p.id}')"
+                  class="absolute bottom-3 left-3 right-3 bg-ink/95 text-canvas hover:bg-terracotta py-2.5 rounded-lg text-xs font-semibold opacity-95 sm:opacity-0 sm:translate-y-2 sm:group-hover:opacity-100 sm:group-hover:translate-y-0 transition-all duration-300 shadow-sm"
+                >
+                  + Quick Add
+                </button>
+              </div>
+              <div class="p-4 sm:p-5">
+                <p class="text-[11px] uppercase tracking-wider text-muted font-semibold">${p.category}</p>
+                <h3 class="font-serif text-base sm:text-lg font-semibold text-ink mt-1 leading-snug">${p.title}</h3>
+                <p class="text-xs text-muted mt-1.5 line-clamp-2 leading-relaxed">${p.subtitle}</p>
+              </div>
+            </div>
+            <div class="px-4 sm:px-5 pb-4 sm:pb-5 pt-2 flex items-center justify-between border-t border-borderSand/60">
+              <div>
+                <span class="font-bold text-base sm:text-lg text-ink">${formatINR(p.price)}</span>
+                <span class="text-[11px] text-muted block">approx.</span>
+              </div>
+              <button onclick="addToCart('${p.id}')" class="text-xs font-bold text-terracotta hover:underline">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    function addToCart(id) {
+      cart[id] = (cart[id] || 0) + 1;
+      saveCart();
+      drawerStep = 'cart';
+      openDrawer();
+    }
+
+    function updateQty(id, delta) {
+      cart[id] = (cart[id] || 0) + delta;
+      if (cart[id] <= 0) delete cart[id];
+      saveCart();
+      renderDrawer();
+    }
+
+    function getCartSubtotal() {
+      return Object.entries(cart).reduce((sum, [id, qty]) => {
+        const item = PRODUCTS.find(p => p.id === id);
+        return item ? sum + item.price * qty : sum;
+      }, 0);
+    }
+
+    function openDrawer() {
+      renderDrawer();
+      document.getElementById('cartOverlay').classList.remove('hidden');
+      document.getElementById('cartDrawer').classList.remove('translate-x-full');
+    }
+
+    function closeDrawer() {
+      document.getElementById('cartOverlay').classList.add('hidden');
+      document.getElementById('cartDrawer').classList.add('translate-x-full');
+    }
+
+    function renderDrawer() {
+      const body = document.getElementById('drawerBody');
+      const footer = document.getElementById('drawerFooter');
+      const title = document.getElementById('drawerTitle');
+      const entries = Object.entries(cart).filter(([id]) => PRODUCTS.some(p => p.id === id));
+
+      if (drawerStep === 'cart') {
+        title.textContent = 'Your Cart';
+        if (!entries.length) {
+          body.innerHTML = `
+            <div class="h-full flex flex-col items-center justify-center text-center py-12">
+              <i data-lucide="shopping-bag" class="w-12 h-12 text-muted/40 mb-3"></i>
+              <p class="font-serif text-lg font-medium">Your cart is currently empty</p>
+              <p class="text-xs text-muted mt-1 max-w-xs">Add CCTV packages, firewalls, or solar systems to request a confirmed quote.</p>
+            </div>
+          `;
+          footer.innerHTML = '';
+          lucide.createIcons();
+          return;
+        }
+
+        body.innerHTML = `<div class="space-y-4">` + entries.map(([id, qty]) => {
+          const item = PRODUCTS.find(p => p.id === id);
+          return `
+            <div class="flex gap-4 bg-stone/70 p-3.5 rounded-xl border border-borderSand">
+              <img src="${item.image}" alt="${item.title}" class="w-16 h-16 rounded-lg object-cover shrink-0" />
+              <div class="flex-1 min-w-0">
+                <h4 class="font-serif text-sm font-semibold text-ink truncate">${item.title}</h4>
+                <p class="text-xs text-muted mt-0.5">${formatINR(item.price)} each</p>
+                <div class="flex items-center justify-between mt-3">
+                  <div class="inline-flex items-center border border-borderSand bg-canvas rounded-lg">
+                    <button onclick="updateQty('${id}', -1)" class="px-2.5 py-1 text-xs font-bold hover:text-terracotta">−</button>
+                    <span class="px-2.5 text-xs font-semibold">${qty}</span>
+                    <button onclick="updateQty('${id}', 1)" class="px-2.5 py-1 text-xs font-bold hover:text-terracotta">+</button>
+                  </div>
+                  <span class="text-sm font-bold">${formatINR(item.price * qty)}</span>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('') + `</div>`;
+
+        footer.innerHTML = `
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-muted">Estimated Subtotal</span>
+              <span class="font-serif text-xl font-bold">${formatINR(getCartSubtotal())}</span>
+            </div>
+            <p class="text-[11px] text-muted">Free site survey included. Pay only after stock &amp; site confirmation.</p>
+            <button onclick="drawerStep='checkout'; renderDrawer();" class="w-full py-3.5 rounded-full bg-ink text-canvas hover:bg-terracotta transition-colors text-sm font-semibold">
+              Proceed to WhatsApp Quote &amp; Order
+            </button>
+          </div>
+        `;
+      } else {
+        title.textContent = 'Confirm Order Details';
+        body.innerHTML = `
+          <form id="checkoutForm" class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider mb-1.5">Full Name *</label>
+              <input id="custName" required placeholder="e.g., Rahul Menon" class="w-full bg-stone border border-borderSand rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-terracotta" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider mb-1.5">Phone / WhatsApp Number *</label>
+              <input id="custPhone" type="tel" required placeholder="10-digit mobile number" class="w-full bg-stone border border-borderSand rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-terracotta" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider mb-1.5">District in Kerala *</label>
+              <select id="custDistrict" class="w-full bg-stone border border-borderSand rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-terracotta">
+                <option>Kottayam</option>
+                <option>Pathanamthitta</option>
+                <option>Alappuzha</option>
+                <option>Ernakulam</option>
+                <option>Thrissur</option>
+                <option>Thiruvananthapuram</option>
+                <option>Kollam</option>
+                <option>Idukki</option>
+                <option>Palakkad</option>
+                <option>Malappuram</option>
+                <option>Kozhikode</option>
+                <option>Wayanad</option>
+                <option>Kannur</option>
+                <option>Kasaragod</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider mb-1.5">Site Address &amp; Pincode *</label>
+              <textarea id="custAddress" required rows="2" placeholder="Town, landmark, pincode" class="w-full bg-stone border border-borderSand rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-terracotta"></textarea>
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider mb-1.5">Installation Notes (Optional)</label>
+              <input id="custNotes" placeholder="Preferred date for free site visit" class="w-full bg-stone border border-borderSand rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-terracotta" />
+            </div>
+          </form>
+        `;
+        footer.innerHTML = `
+          <div class="space-y-2.5">
+            <button onclick="submitWhatsAppOrder()" class="w-full py-3.5 rounded-full bg-terracotta text-white hover:bg-terracottaDark transition-colors text-sm font-semibold">
+              Send Order on WhatsApp (${formatINR(getCartSubtotal())})
+            </button>
+            <button onclick="drawerStep='cart'; renderDrawer();" class="w-full py-2.5 rounded-full bg-stone text-ink text-xs font-semibold">
+              ← Back to Cart
+            </button>
+          </div>
+        `;
+      }
+      lucide.createIcons();
+    }
+
+    function submitWhatsAppOrder() {
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const district = document.getElementById('custDistrict').value;
+      const address = document.getElementById('custAddress').value.trim();
+      const notes = document.getElementById('custNotes').value.trim();
+
+      if (name.length < 2 || phone.length < 10 || address.length < 5) {
+        alert('Please enter your name, valid phone number, and site address.');
+        return;
+      }
+
+      const orderId = 'GL-' + Math.floor(100000 + Math.random() * 900000);
+      const itemLines = Object.entries(cart).map(([id, qty], idx) => {
+        const p = PRODUCTS.find(x => x.id === id);
+        return `${idx + 1}. ${p.title} x${qty} = ${formatINR(p.price * qty)}`;
+      }).join('\n');
+
+      const message =
+        `*New Globallinks Enquiry (${orderId})*\n` +
+        `Name: ${name}\n` +
+        `Phone: ${phone}\n` +
+        `Location: ${address}, ${district}\n\n` +
+        `*Selected Items:*\n${itemLines}\n\n` +
+        `*Approx. Total: ${formatINR(getCartSubtotal())}*\n` +
+        (notes ? `Notes: ${notes}` : '');
+
+      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+      cart = {};
+      saveCart();
+      drawerStep = 'cart';
+      closeDrawer();
+    }
+
+    // Event Listeners
+    document.getElementById('cartOpenBtn').addEventListener('click', openDrawer);
+    document.getElementById('cartCloseBtn').addEventListener('click', closeDrawer);
+    document.getElementById('cartOverlay').addEventListener('click', closeDrawer);
+
+    document.getElementById('searchToggle').addEventListener('click', () => {
+      const bar = document.getElementById('searchBar');
+      bar.classList.toggle('hidden');
+      if (!bar.classList.contains('hidden')) document.getElementById('searchInput').focus();
+    });
+
+    document.getElementById('searchClose').addEventListener('click', () => {
+      document.getElementById('searchBar').classList.add('hidden');
+      searchQuery = '';
+      document.getElementById('searchInput').value = '';
+      renderProducts();
+    });
+
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      renderProducts();
+    });
+
+    document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('newsletterMsg').classList.remove('hidden');
+      e.target.reset();
+    });
+
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 20) {
+        nav.classList.add('glass-nav', 'border-borderSand', 'shadow-xs');
+      } else {
+        nav.classList.remove('glass-nav', 'border-borderSand', 'shadow-xs');
+      }
+    });
+
+    // Initial Render
+    renderCategories();
+    renderProducts();
+    updateCartBadge();
+    lucide.createIcons();
+  </script>
+</body>
+</html>
